@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Sustainable Self-Assessment";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Sustainability Self-Assessment</h2>
+    <p>Please fill out the following form to assess your business's sustainability efforts.</p>
+
+    <form method="post" asp-controller="Assessment" asp-action="SubmitAssessment">
+        <div class="mb-3">
+            <label for="industry" class="form-label">Industry</label>
+            <input type="text" class="form-control" id="industry" name="industry" placeholder="Enter your industry" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="size" class="form-label">Size (Number of Employees)</label>
+            <select class="form-select" id="size" name="size" required>
+                <option value="<10">Less than 10</option>
+                <option value="10-49">10-49</option>
+                <option value="50-249">50-249</option>
+                <option value="250-749">250-749</option>
+                <option value=">750">More than 750</option>
+            </select>
+        </div>
+
+        <!-- Sustainability Awareness Field -->
+        <div class="mb-3">
+            <label for="sustainabilityAwareness" class="form-label">Sustainability Awareness among Employees</label>
+            <select class="form-select" id="sustainabilityAwareness" name="sustainabilityAwareness" required>
+                <option value="high">High Awareness</option>
+                <option value="moderate">Moderate Awareness</option>
+                <option value="low">Low Awareness</option>
+                <option value="none">No Awareness</option>
+            </select>
+        </div>
+
+        <!-- Waste Management Field -->
+        <div class="mb-3">
+            <label for="wasteManagement" class="form-label">Waste Management Practices</label>
+            <select class="form-select" id="wasteManagement" name="wasteManagement" required>
+                <option value="advanced">Advanced (e.g., recycling, composting)</option>
+                <option value="basic">Basic (e.g., general waste reduction)</option>
+                <option value="none">None</option>
+            </select>
+        </div>
+
+        <!-- Mobility Field -->
+        <div class="mb-3">
+            <label for="mobility" class="form-label">Promotion of Eco-Friendly Transportation</label>
+            <select class="form-select" id="mobility" name="mobility" required>
+                <option value="high">Highly Promoted</option>
+                <option value="moderate">Moderately Promoted</option>
+                <option value="low">Low Promotion</option>
+                <option value="none">Not Promoted</option>
+            </select>
+        </div>
+
+        <!-- Training and Development Field -->
+        <div class="mb-3">
+            <label for="trainingDevelopment" class="form-label">Employee Training and Development</label>
+            <select class="form-select" id="trainingDevelopment" name="trainingDevelopment" required>
+                <option value="regular">Regular Training</option>
+                <option value="occasional">Occasional Training</option>
+                <option value="none">No Training</option>
+            </select>
+        </div>
+
+        <!-- AI Model Selection Field -->
+        <div class="mb-3">
+            <label for="aiModel" class="form-label">Choose AI Model for Assessment</label>
+            <select class="form-select" id="aiModel" name="aiModel" required>
+                <option value="WebScraping">WebScraping</option>
+                <option value="GoogleAI">GoogleAI</option>
+                <option value="OpenAI">OpenAI</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Assessment</button>
+
+    </form>
+</div>

@@ -1,0 +1,34 @@
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\appsettings.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Literature Database.staticwebassets.runtime.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Literature Database.exe
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Literature Database.deps.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Literature Database.runtimeconfig.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Literature Database.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Literature Database.pdb
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.AssemblyInfoInputs.cache
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.AssemblyInfo.cs
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.csproj.CoreCompileInputs.cache
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.RazorAssemblyInfo.cache
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.RazorAssemblyInfo.cs
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets\msbuild.Literature Database.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets\msbuild.build.Literature Database.props
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Literature Database.props
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Literature Database.props
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\scopedcss\bundle\Literature Database.styles.css
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\scopedcss\projectbundle\Literature Database.bundle.scp.css
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\refint\Literature Database.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.pdb
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.genruntimeconfig.cache
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\ref\Literature Database.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.csproj.AssemblyReference.cache
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\obj\Debug\net6.0\Literature Database.csproj.CopyComplete
+C:\Users\Vishesh Srivastava\Desktop\Delete\Literature Database\Literature Database\bin\Debug\net6.0\HtmlAgilityPack.dll

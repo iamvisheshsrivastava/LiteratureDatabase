@@ -1,0 +1,64 @@
+﻿@model AssessmentData
+
+<h2>Assessment Results</h2>
+
+<div>
+    <h3>Key Strengths</h3>
+    <p>@Model.KeyStrengths</p>
+
+    <h3>Areas for Improvement</h3>
+    <p>@Model.AreasForImprovement</p>
+
+    <h3>Recommended Actions</h3>
+    <p>@Model.RecommendedActions</p>
+    <h3>
+        Sustainibility Score
+    </h3>
+
+    <!-- Pie Chart for Sustainability Score -->
+    <div style="max-width: 450px; margin: auto;">
+    
+        <canvas id="sustainabilityScoreChart"></canvas>
+    </div>
+
+    <h3>Pressure Of Action</h3>
+    <p>@Model.PressureOfAction</p>
+
+    <!-- Feedback Notification -->
+    <div id="feedbackNotification" style="position: fixed; right: 20px; top: 5%; background-color: lightgreen; padding: 10px; border-radius: 5px; border-color:grey">
+        <p>Was this feedback relevant for you?</p>
+        <button onclick="handleFeedback('up')">👍</button>
+        <button onclick="handleFeedback('down')">👎</button>
+    </div>
+
+
+</div>
+
+
+@section Scripts {
+    <!-- Load Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('sustainabilityScoreChart').getContext('2d');
+        var sustainabilityScoreChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Sustainability Score', 'Remaining'],
+                datasets: [{
+                    label: 'Sustainability Score',
+                    data: [@Model.SustainabilityScore, 10 - @Model.SustainabilityScore],
+                    backgroundColor: ['rgba(0, 162, 0, 1)', 'rgba(211, 211, 211, 1)'],
+                }]
+            },
+        });
+
+        function handleFeedback(feedback) {
+            // Hide the notification
+            document.getElementById('feedbackNotification').style.display = 'none';
+
+            // TODO: Attach to the database and perform analysis
+            console.log('Feedback given:', feedback);
+        }
+
+    </script>
+}

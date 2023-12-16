@@ -1,0 +1,53 @@
+/* Documentation for ASP.NET Core client-side bundling and minification: 
+   https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification */
+
+a.navbar-brand[b-w2pzc6mbe2] {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    color: #2e7d32; /* Green color for sustainability theme */
+}
+
+a[b-w2pzc6mbe2] {
+    color: #0077cc; /* Standard link color */
+}
+
+.btn-primary[b-w2pzc6mbe2] {
+    color: #fff;
+    background-color: #388e3c; /* Dark green for primary buttons */
+    border-color: #2e7d32; /* Slightly darker green for border */
+}
+
+.nav-pills .nav-link.active[b-w2pzc6mbe2], .nav-pills .show > .nav-link[b-w2pzc6mbe2] {
+    color: #fff;
+    background-color: #388e3c; /* Consistent with .btn-primary */
+    border-color: #2e7d32;
+}
+
+.border-top[b-w2pzc6mbe2] {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom[b-w2pzc6mbe2] {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-w2pzc6mbe2] {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-w2pzc6mbe2] {
+    font-size: 1rem;
+    line-height: inherit;
+    background-color: #4caf50; /* Lighter green for a subtle contrast */
+    color: white;
+}
+
+.footer[b-w2pzc6mbe2] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #e8f5e9; /* Light green background for footer */
+}

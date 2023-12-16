@@ -1,0 +1,53 @@
+﻿/* Documentation for ASP.NET Core client-side bundling and minification: 
+   https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    color: #2e7d32; /* Green color for sustainability theme */
+}
+
+a {
+    color: #0077cc; /* Standard link color */
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #388e3c; /* Dark green for primary buttons */
+    border-color: #2e7d32; /* Slightly darker green for border */
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #388e3c; /* Consistent with .btn-primary */
+    border-color: #2e7d32;
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+    background-color: #4caf50; /* Lighter green for a subtle contrast */
+    color: white;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #e8f5e9; /* Light green background for footer */
+}
