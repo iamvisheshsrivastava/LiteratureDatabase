@@ -7,13 +7,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<WebScrapingUtility>();
 
 // Register GoogleSearchService with required parameters
-var googleApiKey = "AIzaSyD8dIx-oWZPoCgbpzDG4XFqxtGtNHBSBP4";
+var googleApiKey = Environment.GetEnvironmentVariable("GoogleApiKey");
 var googleSearchEngineId = "91b8de256ffc34d77";
 builder.Services.AddTransient<GoogleSearchService>(serviceProvider =>
     new GoogleSearchService(googleApiKey, googleSearchEngineId));
 
 // Register OpenAIService
-var openAiApiKey = "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";
+var openAiApiKey = Environment.GetEnvironmentVariable("OpenAIApiKey");
+
 builder.Services.AddTransient<OpenAIService>(serviceProvider =>
     new OpenAIService(openAiApiKey));
 

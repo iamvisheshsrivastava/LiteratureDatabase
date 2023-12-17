@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Literature Database\\Controllers",
+    "\\Literature Database\\Models",
+    "\\Literature Database\\Views",
+    "\\Literature Database\\Views\\Home"
   ],
-  "SelectedNode": "\\C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github",
+  "SelectedNode": "\\Literature Database.sln",
   "PreviewInSolutionExplorer": false
 }

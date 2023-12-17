@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\Literature Database\\Literature Database\\Literature Database.csproj": {}
+    "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github\\Literature Database\\Literature Database.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\Literature Database\\Literature Database\\Literature Database.csproj": {
+    "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github\\Literature Database\\Literature Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\Literature Database\\Literature Database\\Literature Database.csproj",
+        "projectUniqueName": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github\\Literature Database\\Literature Database.csproj",
         "projectName": "Literature Database",
-        "projectPath": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\Literature Database\\Literature Database\\Literature Database.csproj",
+        "projectPath": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github\\Literature Database\\Literature Database.csproj",
         "packagesPath": "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\Literature Database\\Literature Database\\obj\\",
+        "outputPath": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github\\Literature Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vishesh Srivastava\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Google.Cloud.AIPlatform.V1": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            },
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.55, )"

@@ -8,7 +8,7 @@ namespace Literature_Database.Services
 {
     public class OpenAIService
     {
-        private readonly string apiKey = "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";
+        private readonly string apiKey = Environment.GetEnvironmentVariable("OpenAIApiKey");
         private readonly HttpClient httpClient = new HttpClient();
 
         public OpenAIService(string apiKey)
@@ -19,18 +19,14 @@ namespace Literature_Database.Services
 
         public async Task<string> AnalyzeDataAsync(string data)
         {
-            // Constructing the prompt to guide the model for a JSON format response
-            string prompt = $"Please analyze the following query and provide the response in JSON format: {data}";
-
             var requestBody = new
             {
-                model = "gpt-3.5-turbo", // Use your fine-tuned model if applicable
-                messages = new[] { new { role = "system", content = "You are a helpful assistant." },
-                           new { role = "user", content = prompt } },
+                model = "gpt-4",
+                messages = new[] { new { role = "user", content = "Please provide a brief summary: " + data } },
             };
 
             var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
-            var response = await httpClient.PostAsync("https://api.openai.com/v1/chat/completions", content);
+            var response = await httpClient.PostAsync("https://api.openai.com/v1/chat/completions", content); // Using chat completions endpoint
             var responseString = await response.Content.ReadAsStringAsync();
             return responseString;
         }

@@ -59,21 +59,32 @@ namespace Literature_Database.Controllers
             string aiResponse = "";
             if (data.AIModel == "Google")
             {
-                // Call Google's AI API
-                // aiResponse = await CallGoogleApi(model);
+                var googleAIModel = new GoogleAIModel();
+                aiResponse = await googleAIModel.QueryGoogleAI(searchQuery);
             }
+
             else if (data.AIModel == "OpenAI")
             {
-                aiResponse = await _openAIService.AnalyzeDataAsync(searchQuery);
+                aiResponse = await _openAIService.AskModelAsync(
+                    "Given the following sustainability self-assessment for a company: "
+                    + searchQuery
+                    + ". Please provide a structured analysis that includes: "
+                    + "1) Key strengths, "
+                    + "2) Areas for improvement, "
+                    + "3) Recommended actions for each area of sustainability, "
+                    + "4) A sustainability score out of 10, "
+                    + "5) Pressure of action rating (1-10 or categorized as low, medium, high) considering factors like company size, industry, etc."
+                );
+
                 var jsonResponse = JsonConvert.DeserializeObject<dynamic>(aiResponse);
-                var content = jsonResponse.choices[0].message.content.ToString();
+                var content = jsonResponse.choices[0].text.ToString();
 
                 // Set the properties of the results object
-                results.KeyStrengths = ExtractSection(content, "1) Key strengths:");
-                results.AreasForImprovement = ExtractSection(content, "2) Areas for improvement:");
-                results.RecommendedActions = ExtractSection(content, "3) Recommended actions for each area of sustainability:");
-                results.SustainabilityScore = ExtractSustainabilityScore(content);
-                results.PressureOfAction = ExtractPressureOfAction(content);
+                results.KeyStrengths = content;
+                results.AreasForImprovement = "";
+                results.RecommendedActions = "";
+                results.SustainabilityScore = 4;
+                results.PressureOfAction = "Medium";
             }
 
             else if (data.AIModel == "WebScraping")

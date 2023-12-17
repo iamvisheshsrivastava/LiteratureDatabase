@@ -1,11 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "9Ac/abVov6ME1+Cv30fO+VXpybPi9nCeq+gcG8gziyYz0EKyPiG/PWZu4zag9bvNz9g9fJqUV0fo4EMnfxTh1g==",
+  "dgSpecHash": "IZTwEFSOvnP1Jb/VbBqAORE8mtZ/yjU0oiu2u0cu1PgbYQoymlFfwFDN8CdXEDSR587xm0TznouFJMBsQLjtXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\Literature Database\\Literature Database\\Literature Database.csproj",
+  "projectFilePath": "C:\\Users\\Vishesh Srivastava\\Desktop\\Delete\\LiteratureDatabase_Github\\Literature Database\\Literature Database.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.api.commonprotos\\2.10.0\\google.api.commonprotos.2.10.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.api.gax\\4.4.0\\google.api.gax.4.4.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.api.gax.grpc\\4.4.0\\google.api.gax.grpc.4.4.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.cloud.aiplatform.v1\\2.20.0\\google.cloud.aiplatform.v1.2.20.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.cloud.iam.v1\\3.0.0\\google.cloud.iam.v1.3.0.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.cloud.location\\2.0.0\\google.cloud.location.2.0.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.longrunning\\3.0.0\\google.longrunning.3.0.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\google.protobuf\\3.23.0\\google.protobuf.3.23.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\grpc.auth\\2.53.0\\grpc.auth.2.53.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\grpc.core.api\\2.53.0\\grpc.core.api.2.53.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\grpc.net.client\\2.53.0\\grpc.net.client.2.53.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\grpc.net.common\\2.53.0\\grpc.net.common.2.53.0.nupkg.sha512",
     "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\htmlagilitypack\\1.11.55\\htmlagilitypack.1.11.55.nupkg.sha512",
-    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Vishesh Srivastava\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }
