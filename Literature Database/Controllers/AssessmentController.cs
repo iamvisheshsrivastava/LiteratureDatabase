@@ -103,6 +103,7 @@ namespace Literature_Database.Controllers
 
                 var jsonResponse = JsonConvert.DeserializeObject<dynamic>(response);
                 var content = jsonResponse.choices[0].message.content.ToString();
+                content = Regex.Replace(content, @"[\n\*#]", string.Empty);
 
                 results.KeyStrengths = ExtractSection(content, "1) Key strengths:");
                 results.AreasForImprovement = ExtractSection(content, "2) Areas for improvement:");
@@ -161,13 +162,18 @@ namespace Literature_Database.Controllers
 
         private string ExtractPressureOfAction(string content)
         {
-            // A pattern that captures only 'low', 'medium', or 'high' ratings
-            var pattern = @"Pressure of Action Rating.*?:\s*['“]*\b(low|medium|high)\b['”]*";
+            // Pattern to capture 'low', 'medium', or 'high' ratings, either as standalone words or within a sentence
+            var pattern = @"Pressure of Action Rating.*?:\s*([^\n.]*?(low|medium|high)[^\n.]*)(?:\.|\n|$)";
             var match = Regex.Match(content, pattern, RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
             if (match.Success)
             {
-                return match.Groups[1].Value;
+                // Further processing to extract just 'low', 'medium', or 'high' from the captured group
+                var ratingMatch = Regex.Match(match.Groups[1].Value, @"\b(low|medium|high)\b", RegexOptions.IgnoreCase);
+                if (ratingMatch.Success)
+                {
+                    return ratingMatch.Groups[1].Value;
+                }
             }
 
             return "Pressure of action rating not found";
