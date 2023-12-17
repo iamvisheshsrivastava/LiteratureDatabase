@@ -88,7 +88,7 @@ namespace Literature_Database.Controllers
                 results.PressureOfAction = "Medium";
             }
 
-            else if (data.AIModel == "gpt-4-1106-preview" || data.AIModel == "gpt-3.5-turbo" || data.AIModel == "text-curie-001")
+            else if (data.AIModel == "gpt-4-1106-preview" || data.AIModel == "gpt-3.5-turbo-1106")
             {
                 var response = await _openAIService.AnalyzeDataAsync(
                     "Given the following sustainability self-assessment for a company: "
@@ -98,7 +98,7 @@ namespace Literature_Database.Controllers
                     + "2) Areas for improvement, "
                     + "3) Recommended actions for each area of sustainability, "
                     + "4) A sustainability score out of 10, "
-                    + "5) Pressure of action rating (1-10 or categorized as low, medium, high) considering factors like company size, industry, etc."
+                    + "5) Pressure of action rating as low, medium or high considering factors like company size, industry, etc."
                     ,data.AIModel);
 
                 var jsonResponse = JsonConvert.DeserializeObject<dynamic>(response);
@@ -109,19 +109,36 @@ namespace Literature_Database.Controllers
                 results.RecommendedActions = ExtractSection(content, "3) Recommended actions for each area of sustainability:");
                 results.SustainabilityScore = ExtractSustainabilityScore(content);
                 results.PressureOfAction = ExtractPressureOfAction(content);
+                //results.PressureOfAction = "medium";
+
+                //var jsonResponse = JsonConvert.DeserializeObject<dynamic>(response);
+                //var content = jsonResponse.choices[0].message.content;
+
+                //// Deserialize the content into a structured object
+                //var assessmentData = JsonConvert.DeserializeObject<AssessmentData>(content);
+
+                //results.KeyStrengths = assessmentData.SustainabilityAnalysis.KeyStrengths;
+                //results.AreasForImprovement = assessmentData.SustainabilityAnalysis.AreasForImprovement;
+                //results.RecommendedActions = assessmentData.SustainabilityAnalysis.RecommendedActions;
+                //results.SustainabilityScore = assessmentData.SustainabilityAnalysis.SustainabilityScore;
+                //results.PressureOfAction = assessmentData.SustainabilityAnalysis.PressureOfActionRating;
             }
             return RedirectToAction("Results", results);
         }
 
         private string ExtractSection(string content, string sectionTitle)
         {
-            var pattern = $"{Regex.Escape(sectionTitle)}(.*?)(?=\\n\\d\\) |\\n\\n|$)";
+            // Escaping special characters in section title
+            string escapedSectionTitle = Regex.Escape(sectionTitle);
+
+            // Pattern to match different heading formats
+            var pattern = $@"(?:\d+\)\s)?(?:\*{0,3})?\s*{escapedSectionTitle}\s*(?:\*{0,3})?\s*((.|\n)*?)(?=\d+\)\s|\z)";
+
             var match = Regex.Match(content, pattern, RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
             if (match.Success)
             {
-                var sectionContent = match.Groups[1].Value.Trim();
-                return sectionContent.TrimEnd('\n').Trim();
+                return match.Groups[1].Value.Trim();
             }
 
             return "Section not found";
@@ -129,8 +146,8 @@ namespace Literature_Database.Controllers
 
         private int ExtractSustainabilityScore(string content)
         {
-            // Pattern to match '7.5 out of 10' or '7 out of 10'
-            var scorePattern = @"(\d+(\.\d+)?) out of 10";
+            // Updated pattern to match "X out of 10" or "X/10"
+            var scorePattern = @"(\d+(\.\d+)?)(?: out of 10|\/10)";
             var match = Regex.Match(content, scorePattern);
 
             if (match.Success)
@@ -141,16 +158,16 @@ namespace Literature_Database.Controllers
 
             return 0;
         }
+
         private string ExtractPressureOfAction(string content)
         {
-            var pattern = @"5\) Pressure of action rating:.*?(?=\n\d\)|\n\n|$)";
+            // A pattern that captures only 'low', 'medium', or 'high' ratings
+            var pattern = @"Pressure of Action Rating.*?:\s*['“]*\b(low|medium|high)\b['”]*";
             var match = Regex.Match(content, pattern, RegexOptions.Singleline | RegexOptions.IgnoreCase);
 
             if (match.Success)
             {
-                var startIndex = match.Index + match.Value.IndexOf(':') + 1;
-                var extractedText = content.Substring(startIndex).Trim();
-                return extractedText;
+                return match.Groups[1].Value;
             }
 
             return "Pressure of action rating not found";
@@ -160,6 +177,6 @@ namespace Literature_Database.Controllers
         {
             var tokens = Regex.Split(data, @"[\s\r\n]+").Where(t => !string.IsNullOrEmpty(t)).ToList();
             return string.Join(" ", tokens.Take(tokenLimit));
-        }
+        }      
     }
 }

@@ -8,7 +8,9 @@
 
     <div id="loader" class="loader-overlay" style="display:none;">
         <div class="loader-circle"></div>
+        <p class="loader-text">Crafting Custom Sustainability Insights for You... Please Hold.</p>
     </div>
+
 
     <form id="sustainabilityForm" method="post" asp-controller="Assessment" asp-action="SubmitAssessment">
         <div class="mb-3">
@@ -74,8 +76,7 @@
             <label for="aiModel" class="form-label">Choose AI Model for Assessment</label>
             <select class="form-select" id="aiModel" name="aiModel" required>
                 <option value="gpt-4-1106-preview">WebScraping(GPT 4.0)</option>
-                <option value="gpt-3.5-turbo">WebScraping(GPT 3.5)</option>
-                <option value="text-curie-001">WebScraping(GPT Curie)</option>
+                <option value="gpt-3.5-turbo-1106">WebScraping(GPT 3.5)</option>
                 <option value="OpenAI">OpenAI(Self trained)</option>
                 <option value="GoogleAI">GoogleAI</option>            
             </select>
@@ -103,31 +104,37 @@
 
         // CSS to be injected
         var loaderCSS = `
-                    .loader-overlay {
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(255, 255, 255, 0.7);
-                        z-index: 9999;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    .loader-circle {
-                        border: 5px solid #f3f3f3;
-                        border-top: 5px solid #3498db;
-                        border-radius: 50%;
-                        width: 50px;
-                        height: 50px;
-                        animation: spin 2s linear infinite;
-                    }
-                    @@keyframes spin {
-                        0% { transform: rotate(0deg); }
-                        100% { transform: rotate(360deg); }
-                    }
-                `;
+            .loader-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.7);
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; /* Align items vertically */
+            }
+            .loader-circle {
+                border: 5px solid #f3f3f3;
+                border-top: 5px solid #3498db;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                animation: spin 2s linear infinite;
+            }
+            .loader-text {
+                margin-top: 20px; /* Space between loader and text */
+                font-size: 20px;
+                color: #333;
+            }
+                @@keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `;
 
         // Injecting the CSS
         injectCSS(loaderCSS);

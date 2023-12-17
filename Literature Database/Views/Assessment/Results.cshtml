@@ -17,12 +17,13 @@
 
     <!-- Pie Chart for Sustainability Score -->
     <div style="max-width: 450px; margin: auto;">
-    
         <canvas id="sustainabilityScoreChart"></canvas>
     </div>
 
     <h3>Pressure Of Action</h3>
-    <p>@Model.PressureOfAction</p>
+    <div style="max-width: 450px; margin: auto;">
+        <canvas id="pressureOfActionChart" width="100" height="100"></canvas>
+    </div>
 
     <!-- Feedback Notification -->
     <div id="feedbackNotification" style="position: fixed; right: 20px; top: 5%; background-color: lightgreen; padding: 10px; border-radius: 5px; border-color:grey">
@@ -53,12 +54,51 @@
         });
 
         function handleFeedback(feedback) {
-            // Hide the notification
             document.getElementById('feedbackNotification').style.display = 'none';
 
-            // TODO: Attach to the database and perform analysis
             console.log('Feedback given:', feedback);
         }
+
+        var dummyPressureData = {
+            low: 0,
+            medium: 0,
+            high: 0
+        };
+
+        var pressureOfAction = "@Model.PressureOfAction.ToLower()";
+
+        if (pressureOfAction === 'low') {
+            dummyPressureData.low = 1;
+        } else if (pressureOfAction === 'medium') {
+            dummyPressureData.medium = 1;
+        } else if (pressureOfAction === 'high') {
+            dummyPressureData.high = 1;
+        }
+
+        console.log(pressureOfAction);
+
+        var pressureCtx = document.getElementById('pressureOfActionChart').getContext('2d');
+
+        var pressureOfActionChart = new Chart(pressureCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Low', 'Medium', 'High'],
+                datasets: [{
+                    label: 'Pressure of Action',
+                    data: [dummyPressureData.low, dummyPressureData.medium, dummyPressureData.high],
+                    backgroundColor: ['rgba(54, 162, 235, 0.8)', 'rgba(255, 206, 86, 0.8)', 'rgba(255, 99, 132, 0.8)'],
+                    borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(255, 99, 132, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
 
     </script>
 }

@@ -23,6 +23,7 @@ namespace Literature_Database.Services
             var requestBody = new
             {
                 model = modelType,
+                //response_format = new { type = "json_object" },
                 messages = new[]
                 {
                     new { role = "system", content = "You are an AI knowledgeable in sustainability. Provide detailed, accurate, and factual information." },
