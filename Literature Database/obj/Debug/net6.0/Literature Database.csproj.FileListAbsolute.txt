@@ -6,7 +6,24 @@ C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature 
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Literature Database.runtimeconfig.json
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Literature Database.dll
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Literature Database.pdb
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Api.CommonProtos.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Api.Gax.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Api.Gax.Grpc.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Cloud.AIPlatform.V1.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Cloud.Iam.V1.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Cloud.Location.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.LongRunning.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Grpc.Auth.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Grpc.Core.Api.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Grpc.Net.Client.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Grpc.Net.Common.dll
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\HtmlAgilityPack.dll
+C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\obj\Debug\net6.0\Literature Database.csproj.AssemblyReference.cache
 C:\Users\Vishesh Srivastava\Desktop\Delete\LiteratureDatabase_Github\Literature Database\obj\Debug\net6.0\Literature Database.GeneratedMSBuildEditorConfig.editorconfig

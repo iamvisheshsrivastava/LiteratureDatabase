@@ -8,7 +8,7 @@ namespace Literature_Database.Services
 {
     public class GoogleSearchService
     {
-        private readonly string apiKey = "AIzaSyD8dIx-oWZPoCgbpzDG4XFqxtGtNHBSBP4";
+        private readonly string apiKey = "AIzaSyD8dIx-";
         private readonly string searchEngineId;
         private readonly string endpoint = "https://www.googleapis.com/customsearch/v1";
 

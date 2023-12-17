@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using static Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlImageClassificationInputs.Types;
 
 namespace Literature_Database.Services
 {
@@ -17,12 +18,16 @@ namespace Literature_Database.Services
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
         }
 
-        public async Task<string> AnalyzeDataAsync(string data)
+        public async Task<string> AnalyzeDataAsync(string data, string modelType)
         {
             var requestBody = new
             {
-                model = "gpt-4",
-                messages = new[] { new { role = "user", content = "Please provide a brief summary: " + data } },
+                model = modelType,
+                messages = new[]
+                {
+                    new { role = "system", content = "You are an AI knowledgeable in sustainability. Provide detailed, accurate, and factual information." },
+                    new { role = "user", content = data }
+                }
             };
 
             var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");

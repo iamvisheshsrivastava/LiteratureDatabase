@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System.Globalization;
 using System.Reflection;
 using Microsoft.AspNetCore.Http;
+using Google.Cloud.AIPlatform.V1;
 
 namespace Literature_Database.Controllers
 {
@@ -57,7 +58,7 @@ namespace Literature_Database.Controllers
             //string trimmedData = TrimToTokenLimit(combinedData, 3500);
 
             string aiResponse = "";
-            if (data.AIModel == "Google")
+            if (data.AIModel == "GoogleAI")
             {
                 var googleAIModel = new GoogleAIModel();
                 aiResponse = await googleAIModel.QueryGoogleAI(searchQuery);
@@ -87,8 +88,8 @@ namespace Literature_Database.Controllers
                 results.PressureOfAction = "Medium";
             }
 
-            else if (data.AIModel == "WebScraping")
-            {       
+            else if (data.AIModel == "gpt-4-1106-preview" || data.AIModel == "gpt-3.5-turbo" || data.AIModel == "text-curie-001")
+            {
                 var response = await _openAIService.AnalyzeDataAsync(
                     "Given the following sustainability self-assessment for a company: "
                     + searchQuery 
@@ -98,7 +99,7 @@ namespace Literature_Database.Controllers
                     + "3) Recommended actions for each area of sustainability, "
                     + "4) A sustainability score out of 10, "
                     + "5) Pressure of action rating (1-10 or categorized as low, medium, high) considering factors like company size, industry, etc."
-                );
+                    ,data.AIModel);
 
                 var jsonResponse = JsonConvert.DeserializeObject<dynamic>(response);
                 var content = jsonResponse.choices[0].message.content.ToString();
